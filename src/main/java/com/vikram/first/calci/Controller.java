@@ -24,5 +24,26 @@ public class Controller {
         return result;
     }
 
+    @GetMapping("/substract")
+    public Integer subs(@RequestParam Integer... a) {
+        Integer result = calculatorInterface.subs(a);
+        logger.info(result.toString());
+        return result;
+    }
+
+    @GetMapping("/multiply")
+    public Integer multi(@RequestParam Integer... a) {
+        Integer result = calculatorInterface.multi(a);
+        logger.info(result.toString());
+        return result;
+    }
+
+    @GetMapping("/divide")
+    public Integer divide(@RequestParam Integer... a) {
+        Integer result = calculatorInterface.divide(a);
+        logger.info(result.toString());
+        return result;
+    }
+
 
 }
