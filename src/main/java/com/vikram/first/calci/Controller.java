@@ -13,14 +13,14 @@ import java.util.logging.Logger;
 @RestController("/calci")
 public class Controller {
 
-    //    private static final Logger logger = Logger.getLogger(String.valueOf(Controller.class));
+    private static final Logger logger = Logger.getLogger(String.valueOf(Controller.class));
     @Autowired
     CalculatorInterface calculatorInterface;
 
     @GetMapping("/add")
-    public Integer add() {
-//        logger.info("ints are : a{} : b{}" + a + b);
-        Integer result = calculatorInterface.add(10, 20);
+    public Integer add(@RequestParam Integer... a) {
+        Integer result = calculatorInterface.add(a);
+        logger.info(result.toString());
         return result;
     }
 

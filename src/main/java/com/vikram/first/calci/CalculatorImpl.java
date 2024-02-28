@@ -7,12 +7,17 @@ import java.util.logging.Logger;
 @Component
 public class CalculatorImpl implements CalculatorInterface {
 
-//    private static final Logger logger = Logger.getLogger(String.valueOf(CalculatorImpl.class));
+    private static final Logger logger = Logger.getLogger(String.valueOf(CalculatorImpl.class));
 
 
     @Override
-    public Integer add(Integer a, Integer b) {
-//        logger.info(String.valueOf(a+b));
-        return a+b;
+    public Integer add(Integer... c) {
+        int a = 0;
+        Integer result = 0;
+        for (int i = 0; i < c.length; i++) {
+            logger.info("your input : " + c[i]);
+            result = result + c[i];
+        }
+        return result;
     }
 }
