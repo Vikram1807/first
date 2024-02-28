@@ -14,9 +14,9 @@ public class CalculatorImpl implements CalculatorInterface {
     public Integer add(Integer... c) {
         int a = 0;
         Integer result = 0;
-        for (int i = 0; i < c.length; i++) {
-            logger.info("your input : " + c[i]);
-            result += c[i];
+        for (Integer integer : c) {
+            logger.info("your input : " + integer);
+            result += integer;
         }
         return result;
     }
@@ -25,9 +25,9 @@ public class CalculatorImpl implements CalculatorInterface {
     public Integer subs(Integer... c) {
         int a = 0;
         Integer result = 0;
-        for (int i = 0; i < c.length; i++) {
-            logger.info("your input : " + c[i]);
-            result -= c[i];
+        for (Integer integer : c) {
+            logger.info("your input : " + integer);
+            result -= integer;
         }
         return result;
     }
@@ -36,9 +36,9 @@ public class CalculatorImpl implements CalculatorInterface {
     public Integer multi(Integer... c) {
         int a = 0;
         Integer result = 1;
-        for (int i = 0; i < c.length; i++) {
-            logger.info("your input : " + c[i]);
-            result = result * c[i];
+        for (Integer integer : c) {
+            logger.info("your input : " + integer);
+            result = result * integer;
         }
         return result;
     }
@@ -47,9 +47,9 @@ public class CalculatorImpl implements CalculatorInterface {
     public Integer divide(Integer... c) {
         int a = 0;
         Integer result = 1;
-        for (int i = 0; i < c.length; i++) {
-            logger.info("your input : " + c[i]);
-            result = result / c[i];
+        for (Integer integer : c) {
+            logger.info("your input : " + integer);
+            result = result / integer;
         }
         return result;
     }
