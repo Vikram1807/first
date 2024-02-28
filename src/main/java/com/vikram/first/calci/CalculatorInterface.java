@@ -1,9 +1,12 @@
 package com.vikram.first.calci;
 
-public interface CalculatorInterface  {
+public interface CalculatorInterface {
 
-   public Integer add(Integer... c);
-   public Integer subs(Integer... c);
-   public Integer multi(Integer... c);
-   public Integer divide(Integer... c);
+    Integer add(Integer... c);
+
+    Integer subs(Integer... c);
+
+    Integer multi(Integer... c);
+
+    Integer divide(Integer... c);
 }
