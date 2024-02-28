@@ -11,11 +11,11 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 @RestController("/calci")
-public class Controller {
+public class CalciController {
 
-    private static final Logger logger = Logger.getLogger(String.valueOf(Controller.class));
+    private static final Logger logger = Logger.getLogger(String.valueOf(CalciController.class));
     @Autowired
-    CalculatorInterface calculatorInterface;
+    private CalculatorInterface calculatorInterface;
 
     @GetMapping("/add")
     public Integer add(@RequestParam Integer... a) {
