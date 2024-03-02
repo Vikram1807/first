@@ -14,6 +14,10 @@ calci : ignore for now
 
 Student : 
 >add a random student
+<br/>
 >add student with full data
+<br/>
 >update any student
+<br/>
 > allocate laptop to a student
+<br/>
