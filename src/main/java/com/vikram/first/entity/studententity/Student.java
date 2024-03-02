@@ -1,9 +1,7 @@
-package com.vikram.first.entity;
+package com.vikram.first.entity.studententity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.vikram.first.entity.laptopentity.Laptop;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,10 +14,12 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long rollNuber;
+    private Long rollNumber;
 
     private Name Name;
 
     private Marks marks;
+    @OneToOne
+    private Laptop laptop;
 
 }

@@ -1,7 +1,8 @@
 package com.vikram.first.entity.student.controller;
 
-import com.vikram.first.entity.Student;
+import com.vikram.first.entity.laptopentity.Laptop;
 import com.vikram.first.entity.student.service.StudentData;
+import com.vikram.first.entity.studententity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,5 +39,11 @@ public class StudentController {
     public String deleteStudent(@RequestParam Integer rollNumber) {
         studentData.deleteStudent(rollNumber);
         return "student of roll number : " + rollNumber + " deleted";
+    }
+
+    @PostMapping("allocateLaptop")
+    public void allotLaptop(@RequestBody Laptop laptop, @RequestParam Integer rollNumber) {
+        studentData.saveLaptop(laptop);
+        studentData.updateLaptopToRollnumber(rollNumber,laptop);
     }
 }

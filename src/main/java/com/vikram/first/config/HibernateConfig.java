@@ -1,6 +1,7 @@
 package com.vikram.first.config;
 
-import com.vikram.first.entity.Student;
+import com.vikram.first.entity.laptopentity.Laptop;
+import com.vikram.first.entity.studententity.Student;
 import jakarta.annotation.PostConstruct;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -47,6 +48,7 @@ public class HibernateConfig {
             properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             configuration.setProperties(properties);
             configuration.addAnnotatedClass(Student.class);
+            configuration.addAnnotatedClass(Laptop.class);
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
 

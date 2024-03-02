@@ -1,4 +1,4 @@
-package com.vikram.first.entity;
+package com.vikram.first.entity.studententity;
 
 import jakarta.persistence.Embeddable;
 import lombok.Data;
