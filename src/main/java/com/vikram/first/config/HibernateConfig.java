@@ -1,5 +1,6 @@
 package com.vikram.first.config;
 
+import com.vikram.first.entity.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -22,10 +23,11 @@ public class HibernateConfig {
             properties.setProperty(Environment.USER, "root");
             properties.setProperty(Environment.PASS, "root");
             properties.setProperty(Environment.SHOW_SQL, "true");
-            properties.setProperty(Environment.HBM2DDL_AUTO, "update");
+            properties.setProperty(Environment.HBM2DDL_AUTO, "create-drop");
             properties.setProperty(Environment.AUTOCOMMIT, "true");
             properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             configuration.setProperties(properties);
+            configuration.addAnnotatedClass(Student.class);
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
 
