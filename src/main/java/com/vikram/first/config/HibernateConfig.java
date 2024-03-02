@@ -17,15 +17,9 @@ import java.util.Properties;
 @Component
 public class HibernateConfig {
     private static SessionFactory sessionFactory;
+    private static String isH2Enabled;
     @Value("${spring.h2.console.enabled}")
     private String h2;
-    private static String isH2Enabled;
-
-    @PostConstruct
-    public void init() {
-        isH2Enabled = h2;
-    }
-
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
@@ -56,6 +50,11 @@ public class HibernateConfig {
             return sessionFactory;
         }
         return sessionFactory;
+    }
+
+    @PostConstruct
+    public void init() {
+        isH2Enabled = h2;
     }
 
 }

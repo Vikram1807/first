@@ -44,6 +44,6 @@ public class StudentController {
     @PostMapping("allocateLaptop")
     public void allotLaptop(@RequestBody Laptop laptop, @RequestParam Integer rollNumber) {
         studentData.saveLaptop(laptop);
-        studentData.updateLaptopToRollnumber(rollNumber,laptop);
+        studentData.updateLaptopToRollnumber(rollNumber, laptop);
     }
 }

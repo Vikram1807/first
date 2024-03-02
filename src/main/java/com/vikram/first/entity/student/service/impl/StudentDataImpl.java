@@ -99,7 +99,7 @@ public class StudentDataImpl implements StudentData {
     }
 
     @Override
-    public void updateLaptopToRollnumber(Integer rollNumber,Laptop laptop) {
+    public void updateLaptopToRollnumber(Integer rollNumber, Laptop laptop) {
         Student s = fetch(rollNumber);
         Laptop l = new Laptop();
         l.setLaptopId(laptop.getLaptopId());

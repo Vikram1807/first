@@ -11,11 +11,11 @@ public interface StudentData {
 
     void saveRandomStudent();
 
-    void updateName(int roll,String firstName, String lastName);
+    void updateName(int roll, String firstName, String lastName);
 
     void deleteStudent(Integer rollNumber);
 
     void saveLaptop(Laptop laptop);
 
-    void updateLaptopToRollnumber(Integer rollNumber,Laptop laptop);
+    void updateLaptopToRollnumber(Integer rollNumber, Laptop laptop);
 }
