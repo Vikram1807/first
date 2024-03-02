@@ -8,3 +8,12 @@ if u jyst trigger it will run on H2 pretty simple eh!
 todo : someday i will fork out calci project from this.
 
       for now i am just revising my topics
+
+
+calci : ignore for now 
+
+Student : 
+>add a random student
+>add student with full data
+>update any student
+> allocate laptop to a student
