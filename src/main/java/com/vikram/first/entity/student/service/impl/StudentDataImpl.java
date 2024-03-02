@@ -82,6 +82,16 @@ public class StudentDataImpl implements StudentData {
         updateStudent(s);
     }
 
+    @Override
+    public void deleteStudent(Integer rollNumber) {
+        SessionFactory sf = HibernateConfig.getSessionFactory();
+        Session s = sf.openSession();
+        Transaction tx = s.beginTransaction();
+        Student st = fetch(rollNumber);
+        s.delete(st);
+        tx.commit();
+    }
+
     private void updateStudent(Student student) {
         SessionFactory sf = HibernateConfig.getSessionFactory();
         Session s = sf.openSession();

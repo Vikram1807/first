@@ -11,4 +11,6 @@ public interface StudentData {
     void saveRandomStudent();
 
     void updateName(int roll,String firstName, String lastName);
+
+    void deleteStudent(Integer rollNumber);
 }

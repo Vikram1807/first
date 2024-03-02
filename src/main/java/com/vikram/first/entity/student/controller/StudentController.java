@@ -22,15 +22,21 @@ public class StudentController {
         return "data with name : " + firstName + " " + lastName + "added sucessFully";
     }
 
-    @GetMapping("/stud")
+    @GetMapping("/randomStudent")
     public String addStu() {
         studentData.saveRandomStudent();
         return "success";
     }
 
-    @PutMapping("updateName")
+    @PutMapping("updatename")
     public String updateName(@RequestParam int roll, @RequestParam String firstName, @RequestParam String lastName) {
-        studentData.updateName(roll,firstName, lastName);
+        studentData.updateName(roll, firstName, lastName);
         return "successs";
+    }
+
+    @DeleteMapping("/deletestudent")
+    public String deleteStudent(@RequestParam Integer rollNumber) {
+        studentData.deleteStudent(rollNumber);
+        return "student of roll number : " + rollNumber + " deleted";
     }
 }
