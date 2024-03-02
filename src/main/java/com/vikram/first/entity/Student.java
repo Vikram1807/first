@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long rollNuber;
 
     private Name Name;
