@@ -6,6 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+/**
+ * The type Laptop.
+ */
 @Entity
 @Data
 public class Laptop {

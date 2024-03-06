@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * The type Marks.
+ */
 @Embeddable
 @Data
 @Setter

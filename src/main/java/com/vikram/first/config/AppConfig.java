@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * The type App config.
+ */
 @Configuration
 public class AppConfig {
 
@@ -14,6 +17,11 @@ public class AppConfig {
     @Value("${spring.h2.console.enabled}")
     private boolean isH2Enabled;
 
+    /**
+     * Gets data source.
+     *
+     * @return the data source
+     */
     @Bean
     public DataSource getDataSource() {
         if (isH2Enabled) {

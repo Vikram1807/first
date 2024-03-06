@@ -4,6 +4,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
+/**
+ * The type Calculator.
+ */
 @Component
 public class CalculatorImpl implements CalculatorInterface {
 

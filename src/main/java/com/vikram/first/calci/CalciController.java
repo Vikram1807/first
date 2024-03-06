@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.logging.Logger;
 
+/**
+ * The type Calci controller.
+ */
 @RestController("/calci")
 public class CalciController {
 
@@ -14,6 +17,12 @@ public class CalciController {
     @Autowired
     private CalculatorInterface calculatorInterface;
 
+    /**
+     * Add integer.
+     *
+     * @param a the a
+     * @return the integer
+     */
     @GetMapping("/add")
     public Integer add(@RequestParam Integer... a) {
         Integer result = calculatorInterface.add(a);
@@ -21,6 +30,12 @@ public class CalciController {
         return result;
     }
 
+    /**
+     * Subs integer.
+     *
+     * @param a the a
+     * @return the integer
+     */
     @GetMapping("/substract")
     public Integer subs(@RequestParam Integer... a) {
         Integer result = calculatorInterface.subs(a);
@@ -28,6 +43,12 @@ public class CalciController {
         return result;
     }
 
+    /**
+     * Multi integer.
+     *
+     * @param a the a
+     * @return the integer
+     */
     @GetMapping("/multiply")
     public Integer multi(@RequestParam Integer... a) {
         Integer result = calculatorInterface.multi(a);
@@ -35,6 +56,12 @@ public class CalciController {
         return result;
     }
 
+    /**
+     * Divide integer.
+     *
+     * @param a the a
+     * @return the integer
+     */
     @GetMapping("/divide")
     public Integer divide(@RequestParam Integer... a) {
         Integer result = calculatorInterface.divide(a);

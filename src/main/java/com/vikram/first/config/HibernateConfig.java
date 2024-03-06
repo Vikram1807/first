@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 import java.util.Objects;
 import java.util.Properties;
 
+/**
+ * The type Hibernate config.
+ */
 @Component
 public class HibernateConfig {
     private static SessionFactory sessionFactory;
@@ -21,6 +24,11 @@ public class HibernateConfig {
     @Value("${spring.h2.console.enabled}")
     private String h2;
 
+    /**
+     * Gets session factory.
+     *
+     * @return the session factory
+     */
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             Configuration configuration = new Configuration();
@@ -52,6 +60,9 @@ public class HibernateConfig {
         return sessionFactory;
     }
 
+    /**
+     * Init.
+     */
     @PostConstruct
     public void init() {
         isH2Enabled = h2;

@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+/**
+ * The type Student data.
+ */
 @Component
 public class StudentDataImpl implements StudentData {
 
